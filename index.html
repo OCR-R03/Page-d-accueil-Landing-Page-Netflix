@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Netflix Landing Page Website</title>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo"><img src="./images/logo.png" alt="Logo rouge Netflix"></a>
+        <ul class="nav">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Films</a></li>
+            <li><a href="#">Nouveautés les plus regardées</a></li>
+            <li><a href="#">Ma liste</a></li>
+        </ul>
+
+        <div class="recherche">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+    
+    </header>
+
+    <div class="bannière">
+        
+        <img src="./images/John-Wick.jpg" class="bg" alt="">
+        <div class="content">
+            <img src="./images/John_Wick_3.png" class="titreFilm" alt="">
+            <h4>
+                <span>2019</span>
+                <span><i>12+</i></span>
+                <span>1h 31min</span>
+                <span>Action</span>
+            </h4>
+
+            <p>
+                John Wick est désormais en cavale. Une prime de 14 millions de dollars a été mise sur sa tête car 
+                il a tué un membre de la Grande Table. De plus, l'ayant fait dans les murs du Continental Hotel de 
+                New York, il se retrouve excommunié. John peut malgré tout compter sur la clémence de Winston, 
+                le directeur du Continental, qui lui a laissé une heure avant d’être considéré comme banni. John va 
+                alors tout faire pour quitter la ville et échapper aux assassins qui le traquent.
+            </p>
+
+            <div class="boutton">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Lecture</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Ma liste</a>
+            </div>
+        </div>
+
+        <a class="play" onclick="toggleVideo();"><img src="./images/play.png">Regarde la bande-annonce</a>
+    </div>
+
+    <div class="trailer">
+        <video src="./vidéo/Bande d'annonce.mp4" controls="true"></video>
+        <img src="./images/close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+    
+</body>
+</html>
